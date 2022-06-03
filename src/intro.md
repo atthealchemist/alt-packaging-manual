@@ -19,59 +19,57 @@
 
 Я буду везде стараться показывать процесс выполнения команд. Сами же команды буду описывать так:
 
-```bash
-$ whoami
-```
+<div id="termynal" data-termynal data-ty-typeDelay="40" data-ty-lineDelay="700">
+    <span data-ty="input">whoami</span>
+    <span class="no-select" data-ty>pushkeen</span>
+</div>
 
 Знак доллара перед началом команды означает, что эта команда должна быть запущена от текущего пользователя. Эти команды ты можешь копировать к себе в консоль. Копируя их, не копируй знак доллара и пробел после него в начале команды! Терминал их не распознает!
 
 Процесс выполнения команд будет выглядеть следующим образом:
-```bash
-[pushkeen@localhost ~]$ whoami
-pushkeen
-```
+
+<div id="termynal" data-termynal  data-ty-typeDelay="40" data-ty-lineDelay="700">
+    <span data-ty="input" data-ty-prompt="[pushkeen@localhost ~] $">whoami</span>
+    <span class="no-select" data-ty>pushkeen</span>
+</div>
 
 Если вдруг надо выполнить команду из под суперпользователя (aka рута):
-```
-# cat /etc/passwd
-```
+<div id="termynal" data-termynal data-ty-typeDelay="40" data-ty-lineDelay="700">
+    <span data-ty="input" data-ty-prompt="[root@localhost /] #">cat /etc/passwd</span>
+</div>
 
 Перед запуском таких команд обязательно надо делать
-```bash
-$ su - 
-```
+<div id="termynal" data-termynal data-ty-typeDelay="40" data-ty-lineDelay="700">
+    <span data-ty="input" data-ty-prompt="[pushkeen@localhost ~] $">su -</span>
+    <span class="no-select" data-ty>Enter password: ********</span>
+    <span data-ty="input" data-ty-prompt="[root@localhost] #"></span>
+</div>
 
 ## Могу я помочь тебе с этим мануалом?
 Конечно, можешь! Всё очень просто!
 
-1. Скачай этот репозиторий к себе следующей командой
-```bash
-$ git clone https://github.com/atthealchemist/alt-build-manual.git
-```
-и зайди в него
-```bash
-$ cd ./alt-build-manual/
-```
-2. Создай новую веточку, например *intro-add-section-credits*
-```bash
-$ git checkout -b intro-add-section-credits
-```
+<div id="termynal" data-termynal data-ty-typeDelay="40" data-ty-lineDelay="700">
+    <span data-ty="input" data-ty-prompt="[~] $">git clone https://github.com/atthealchemist/alt-packaging-manual.git</span>
+    <span data-ty="progress" data-ty-progressPercent="81"></span>
+    <span class="no-select" data-ty>Successfully cloned repo @ ./alt-packaging-manual.git</span>
+    <span data-ty="input" data-ty-prompt="[~] $">cd ./alt-packaging-manual/</span>
+    <span data-ty="input" data-ty-prompt="[~/alt-packaging-manual] $">git checkout -b intro-add-section-credits</span>
+    <span class="no-select" data-ty>{...Внёс изменения в файлики...}</span>
+    <span data-ty="input" data-ty-prompt="[~/alt-packaging-manual] $">git commit -am "Добавил новую секцию: Благодарности в intro.md"</span>
+    <span class="no-select" data-ty>Commited 1 file</span>
+    <span data-ty="input" data-ty-prompt="[~/alt-packaging-manual] $">git push origin intro-add-section-credits</span>
+    <span class="no-select" data-ty>Successfully pushed to branch 'intro-add-section-credits' on origin</span>
+</div>
 
-3. Необязательно, но если хочется видеть свои изменения в книге в режиме реального времени:
+И создай Pull Request (или Merge Request, что в принципе одно и то же) в master.
+
+Необязательно, но если хочется видеть свои изменения в книге в режиме реального времени:
   - скачай mdBook с [официального сайта](https://github.com/rust-lang/mdBook/releases) и распакуй его в *alt-build-manual*
   - запусти `./mdbook serve`
   - после чего перейди на [localhost:3000](http://localhost:3000) в любом браузере.
 
   Всё, можешь вносить исправления в markdown-файлики, сохранять их и видеть изменения сразу в браузере.
 
-После того, как внёс изменения, закоммить их
-```bash
-$ git commit -am "Добавил новую секцию: Благодарности в intro.md"
-```
-и запушь эту веточку
-```bash
-$ git push origin intro-add-section-credits
-```
- и создай Pull Request (или Merge Request, что в принципе одно и то же) в master. 
+ 
 
 Заранее спасибо за помощь, без тебя было бы труднее! :)

@@ -4,3 +4,9 @@ language = "ru"
 multilingual = true
 src = "src"
 title = "Руководство по сборке пакетов в AltLinux"
+
+[output.html]
+git-repository-url = "https://github.com/atthealchemist/alt-packaging-manual"
+git-repository-icon = "fa-github"
+additional-css = ["styles/termynal.css"]
+additional-js = ["scripts/termynal.min.js"]
