@@ -1,0 +1,6 @@
+[book]
+authors = ["AltLinux team"]
+language = "ru"
+multilingual = true
+src = "src"
+title = "Руководство по сборке пакетов в AltLinux"
