@@ -7,4 +7,5 @@
   - [Из архивов исходников (.zip, .tar.gz...)](./packaging/from/archive.md)
   - [Из готовых репозиториев](./packaging/from/repository.md)
   - [Из исходников собранных пакетов в других пакетных репозиториях (Fedora, Debian, etc.)](./packaging/from/srpm.md)
+  - [Предварительная сборка пакетов в Hasher](./packaging/hasher.md)
 - [Публикация пакетов](./deploy/index.md)

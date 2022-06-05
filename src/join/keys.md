@@ -1,10 +1,10 @@
 ## Создание ключей
 ### SSH ключ
-SSH ключ нужен для предоставления доступа тебе и идентификации твоей работы в инфраструктуре [git.alt]().
+SSH ключ нужен для предоставления доступа тебе и идентификации твоей работы в инфраструктуре [Gitery](https://gitery.altlinux.org) и [Gyle](https://gyle.altlinux.org).
 
 Создать его очень просто:
 <div id="termynal" data-termynal  data-ty-typeDelay="40" data-ty-lineDelay="700">
-    <span data-ty="input" data-ty-prompt="[pushkeen@localhost ~] $">ssh-keygen -t ED25519 -b 4096</span>
+    <span data-ty="input" data-ty-prompt="[~] $">ssh-keygen -t ED25519 -b 4096</span>
 </div>
 
 Сейчас я объясню, что это за параметры:
@@ -18,7 +18,7 @@ SSH ключ нужен для предоставления доступа те�
 
 Подробный процесс создания ключа:
 ```bash
-[pushkeen@localhost ~]$ ssh-keygen -t ed25519 -b 4096
+[~] $ ssh-keygen -t ed25519 -b 4096
 
 Generating public/private ed25519 key pair.
 Enter file in which to save the key (/home/pushkeen/.ssh/id_ed25519):  # можешь нажать Enter или задать свой путь до файла ключа. Например, я хочу сохранить ключ с названием "pushkeen_git_alt_ssh_key" в каталоге ~/ssh-keys/, я введу ~/ssh-keys/pushkeen_git_alt_ssh_key
@@ -41,7 +41,7 @@ The key randomart image is:
 |        .=N.      |
 +----[SHA256]------+
 
-[pushkeen@localhost ~]$ 
+[~] $ 
 ```
 
 ### GPG-ключ
@@ -50,13 +50,13 @@ The key randomart image is:
 
 Создаётся просто, одной командой
 <div id="termynal" data-termynal  data-ty-typeDelay="40" data-ty-lineDelay="700">
-    <span data-ty="input" data-ty-prompt="[pushkeen@localhost ~] $">gpg --gen-key</span>
+    <span data-ty="input" data-ty-prompt="[~] $">gpg --gen-key</span>
 </div>
 
 
 Подробный процесс создания GPG-ключа:
 ```bash
-[pushkeen@localhost ~]$ gpg --gen-key
+[~] $ gpg --gen-key
 gpg (GnuPG) 1.4.23; Copyright (C) 2015 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
@@ -119,7 +119,7 @@ pub   4096R/DEADBEEF 2022-06-03
 uid                  Alexander Pushkin (pushkeen gpg key) <pushkeen@altlinux.org>
 sub   4096R/DEADB0AB 2022-06-03
 
-[pushkeen@localhost ~]$ 
+[~] $ 
 ```
 
 После чего экспортируй свой новоиспечённый GPG-ключ в файл следующей командой:

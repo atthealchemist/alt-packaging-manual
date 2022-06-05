@@ -1,10 +1,10 @@
-# Конфигурация git
+## Конфигурация git
 
 Сначала конфигурируем git для подписания своих коммитов.
 
 <div id="termynal" data-termynal  data-ty-typeDelay="40" data-ty-lineDelay="700">
     <span data-ty="input" data-ty-prompt="[~] $">git config --global user.name 'Alexander Pushkin'</span>
-    <span data-ty="input" data-ty-prompt="[~] $">$ git config --global user.email 'pushkeen@altlinux.org'</span>
+    <span data-ty="input" data-ty-prompt="[~] $">git config --global user.email 'pushkeen@altlinux.org'</span>
     <span data-ty="input" data-ty-prompt="[~] $">git config --global user.signingkey 'DEADBEEF'</span>
 </div>
 

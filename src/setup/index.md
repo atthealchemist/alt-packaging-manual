@@ -16,11 +16,14 @@
 <!-- Установка всего необходимого -->
 {{#include install.md}}
 
-<!-- ### Конфигурация Git -->
+<!-- Конфигурация Git -->
 {{#include git.md}}
 
-<!-- ### Конфигурация `.rpmmacros` -->
+<!-- Конфигурация SSH -->
+{{#include ssh.md}}
+
+<!-- Конфигурация `.rpmmacros` -->
 {{#include rpmmacros.md}}
 
-<!-- ### Конфигурация Hasher -->
+<!-- Конфигурация Hasher -->
 {{#include hasher.md}}
