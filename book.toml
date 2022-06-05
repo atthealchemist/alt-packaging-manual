@@ -8,5 +8,5 @@ title = "Руководство по сборке пакетов в AltLinux"
 [output.html]
 git-repository-url = "https://github.com/atthealchemist/alt-packaging-manual"
 git-repository-icon = "fa-github"
-additional-css = ["styles/termynal.css"]
-additional-js = ["scripts/termynal.min.js"]
+additional-css = ["styles/termynal.css", "styles/main.css"]
+additional-js = ["scripts/termynal.min.js", "scripts/main.js"]
