@@ -9,7 +9,7 @@
         <p>Adding user pushkeen to group hashman</p>
     </span>
     <span data-ty="input" data-ty-prompt="[root@localhost /] #">exit</span>
-    <span data-ty="input" data-ty-prompt="[pushkeen@localhost ~] $"></span>
+    <span data-ty="input" data-ty-prompt="[~] $"></span>
 </div>
 
 Не забудь выйти из под рута командой `exit` и перелогиниться, чтобы новые группы применились к твоему пользователю.
@@ -24,13 +24,8 @@
     <span data-ty="input" data-ty-prompt="[~] $">mkdir -p ~/{.hasher,repo,}</span>
 </div>
 
-И создай внутри него файл `~/.hasher/config` командой
-<div id="termynal" data-termynal data-ty-title="bash" data-ty-typeDelay="40" data-ty-lineDelay="700">
-    <span data-ty="input" data-ty-prompt="[~] $">nano ~/.hasher/config</span>
-</div>
-
-Добавь в него следующие строчки:
-<div id="termynal" data-termynal data-ty-title="nano" data-ty-typeDelay="40" data-ty-lineDelay="700">
+И создай внутри него файл `~/.hasher/config` с следующим содержимым:
+<div id="termynal" data-termynal data-ty-title="nano ~/.hasher/config" data-ty-typeDelay="40" data-ty-lineDelay="700">
     <span data-ty>
         <p>USER=pushkeen</p>
         <p>workdir="/tmp/.private/pushkeen/"</p>
@@ -48,13 +43,8 @@
 Полный список поддерживаемых архитектур можно найти [здесь](https://www.altlinux.org/Ports)
 
 После всего этого (мы же хотим проверять и устанавливать наш свежесобранный пакет как из репозитория, не так ли?)
-мы создаём файл `/etc/apt/sources.list.d/hasher_repo`
-<div id="termynal" data-termynal data-ty-title="bash" data-ty-typeDelay="40" data-ty-lineDelay="700">
-    <span data-ty="input" data-ty-prompt="[~] $">sudo nano /etc/apt/sources.list.d/hasher_repo</span>
-</div>
-со следующим содержимым:
-
-<div id="termynal" data-termynal data-ty-title="nano" data-ty-typeDelay="40" data-ty-lineDelay="700">
+мы создаём файл `/etc/apt/sources.list.d/hasher_repo` со следующим содержимым:
+<div id="termynal" data-termynal data-ty-title="nano /etc/apt/sources.list.d/hasher_repo" data-ty-typeDelay="40" data-ty-lineDelay="700">
     <span data-ty>
         <p>rpm file:/home/pushkeen/repo x86_64 hasher</p>
     </span>

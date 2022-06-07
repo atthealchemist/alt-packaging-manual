@@ -1,14 +1,8 @@
 ## Конфигурация `.rpmmacros`
-Создай файл `.rpmmacros` в домашнем каталоге следующей командой:
-
-<div id="termynal" data-termynal data-ty-title="bash" data-ty-typeDelay="40" data-ty-lineDelay="700">
-    <span data-ty="input" data-ty-prompt="[~] $">nano ~/.rpmmacros</span>
-</div>
-
-И добавь в него следующие строчки:
-<div id="termynal" data-termynal data-ty-title="nano" data-ty-typeDelay="40" data-ty-lineDelay="700">
+Создай файл `.rpmmacros` в домашнем каталоге и добавь в него следующие строчки:
+<div id="termynal" data-termynal data-ty-title="nano ~/.rpmmacros" data-ty-typeDelay="40" data-ty-lineDelay="700">
     <span data-ty>
-        <p>%packager Alexander Pushkin <pushkeen@altlinux.org></p>
+        <p>%packager Alexander Pushkin &lt;pushkeen@altlinux.org&gt;</p>
         <p>%_gpg_name BFFDEB200AAC53999992BA3D10EEDE37DEADBEEF</p>
     </span>
 </div>

@@ -19,7 +19,7 @@
     <span data-ty="input" data-ty-prompt="[~] $">gpg --list-keys | grep -B 1 'Alexander Pushkin'</span>
     <span class="no-select" data-ty>
         <p>pub   4096R/DEADBEEF 2022-06-03  # <-- DEADBEEF - наш подписной ключик</p>
-        <p>uid                  Alexander Pushkin (pushkeen gpg key) <pushkeen@altlinux.org></p>
+        <p>uid                  Alexander Pushkin (pushkeen gpg key) &lt;pushkeen@altlinux.org&gt;</p>
     </span>
 </div>
 

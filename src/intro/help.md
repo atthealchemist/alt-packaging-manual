@@ -1,7 +1,7 @@
 ## Могу ли я помочь тебе с этим мануалом?
 Конечно, можешь! Всё очень просто!
 
-<div id="termynal" data-termynal data-ty-typeDelay="40" data-ty-lineDelay="700">
+<div id="termynal" data-termynal data-ty-title="bash" data-ty-typeDelay="40" data-ty-lineDelay="700">
     <span data-ty="input" data-ty-prompt="[~] $">git clone https://github.com/atthealchemist/alt-packaging-manual.git</span>
     <span data-ty="progress" data-ty-progressPercent="81"></span>
     <span class="no-select" data-ty>Successfully cloned repo @ ./alt-packaging-manual.git</span>
