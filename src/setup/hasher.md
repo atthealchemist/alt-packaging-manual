@@ -1,12 +1,13 @@
 ## Конфигурация Hasher
 
 Для того, чтобы пользоваться Hasher, надо добавить в него нашего пользователя - *pushkeen*.
-<div id="termynal" data-termynal data-ty-typeDelay="40" data-ty-lineDelay="700">
+<div id="termynal" data-termynal data-ty-title="bash" data-ty-typeDelay="40" data-ty-lineDelay="700">
     <span data-ty="input" data-ty-prompt="[root@localhost /] #">hasher-useradd pushkeen</span>
-    <span class="no-select" data-ty>Adding user pushkeen to group pushkeen_a</span>
-    <span class="no-select" data-ty>Adding user pushkeen to group pushkeen_b
-</span>
-    <span class="no-select" data-ty>Adding user pushkeen to group hashman</span>
+    <span class="no-select" data-ty>
+        <p>Adding user pushkeen to group pushkeen_a</p>
+        <p>Adding user pushkeen to group pushkeen_b</p>
+        <p>Adding user pushkeen to group hashman</p>
+    </span>
     <span data-ty="input" data-ty-prompt="[root@localhost /] #">exit</span>
     <span data-ty="input" data-ty-prompt="[pushkeen@localhost ~] $"></span>
 </div>
@@ -18,24 +19,28 @@
 - Группа *pushkeen_b (builder)* - группа-сборщик пакета. То есть те, кто состоят в этой группе, имеют право собирать пакеты в Hasher.
 - Группа *hashman* - пользователь, под которым запускается Hasher.
 
-Для простейшей конфигурации Hasher создай каталог `~/.hasher` - для конфигурации Hasher и каталог `~/repo` (он не обязательно должен называться именно так и располагаться именно здесь) - для хранения твоего локального репозитория, в котором Hasher будет собирать пакеты:
-```bash
-$ mkdir -p ~/{.hasher,repo,}
-```
+Для простейшей конфигурации Hasher создай каталоги `~/.hasher` - где будут лежать настройки непосредственно для Hasher и `~/repo/` - где будет локальный репозиторий, куда Hasher будет собирать твои пакеты:
+<div id="termynal" data-termynal data-ty-title="bash"  data-ty-typeDelay="40" data-ty-lineDelay="700">
+    <span data-ty="input" data-ty-prompt="[~] $">mkdir -p ~/{.hasher,repo,}</span>
+</div>
+
 И создай внутри него файл `~/.hasher/config` командой
-```bash
-$ nano ~/.hasher/config
-```
+<div id="termynal" data-termynal data-ty-title="bash" data-ty-typeDelay="40" data-ty-lineDelay="700">
+    <span data-ty="input" data-ty-prompt="[~] $">nano ~/.hasher/config</span>
+</div>
+
 Добавь в него следующие строчки:
-```bash
-USER=pushkeen
-workdir="/tmp/.private/pushkeen/"
-target=x86_64
-packager="`rpm --eval %packager`"
-apt_config="$HOME/.hasher/apt.conf"
-def_repo="$HOME/repo"
-mount=/dev/pts,/proc
-```
+<div id="termynal" data-termynal data-ty-title="nano" data-ty-typeDelay="40" data-ty-lineDelay="700">
+    <span data-ty>
+        <p>USER=pushkeen</p>
+        <p>workdir="/tmp/.private/pushkeen/"</p>
+        <p>target=x86_64</p>
+        <p>packager="`rpm --eval %packager`"</p>
+        <p>apt_config="$HOME/.hasher/apt.conf"</p>
+        <p>def_repo="$HOME/repo"</p>
+        <p>mount=/dev/pts,/proc</p>
+    </span>
+</div>
 После чего нажимай комбинацию клавиш <kbd>Ctrl</kbd> + <kbd>O</kbd> (да, это английская О, не ноль) для сохранения файла.
 
 Если ты хочешь собирать пакеты для 32-битной архитектуры, меняй `target=x86_64` в строчках выше на `target=i586`.
@@ -43,10 +48,20 @@ mount=/dev/pts,/proc
 Полный список поддерживаемых архитектур можно найти [здесь](https://www.altlinux.org/Ports)
 
 После всего этого (мы же хотим проверять и устанавливать наш свежесобранный пакет как из репозитория, не так ли?)
-мы создаём файл `/etc/apt/sources.list.d/hasher_local_build_repo`
+мы создаём файл `/etc/apt/sources.list.d/hasher_repo`
+<div id="termynal" data-termynal data-ty-title="bash" data-ty-typeDelay="40" data-ty-lineDelay="700">
+    <span data-ty="input" data-ty-prompt="[~] $">sudo nano /etc/apt/sources.list.d/hasher_repo</span>
+</div>
 со следующим содержимым:
-```conf
-rpm file:/home/pushkeen/repo x86_64 hasher
-```
 
-После чего делаем `sudo apt-get update`, чтобы синхронизироваться с нашим локальным репозиторием.
+<div id="termynal" data-termynal data-ty-title="nano" data-ty-typeDelay="40" data-ty-lineDelay="700">
+    <span data-ty>
+        <p>rpm file:/home/pushkeen/repo x86_64 hasher</p>
+    </span>
+</div>
+
+После чего делаем 
+<div id="termynal" data-termynal data-ty-title="bash" data-ty-typeDelay="40" data-ty-lineDelay="700">
+    <span data-ty="input" data-ty-prompt="[~] $">sudo apt-get update</span>
+</div>
+чтобы синхронизироваться с нашим локальным репозиторием.
