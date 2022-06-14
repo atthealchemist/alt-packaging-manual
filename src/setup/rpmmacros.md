@@ -1,14 +1,10 @@
 ## Конфигурация `.rpmmacros`
-Создай файл `.rpmmacros` в домашнем каталоге следующей командой:
+Создай файл `.rpmmacros` в домашнем каталоге и добавь в него следующие строчки:
+<div id="termynal" data-termynal data-ty-title="nano ~/.rpmmacros" data-ty-typeDelay="40" data-ty-lineDelay="700">
+    <span data-ty>
+        <p>%packager Alexander Pushkin &lt;pushkeen@altlinux.org&gt;</p>
+        <p>%_gpg_name BFFDEB200AAC53999992BA3D10EEDE37DEADBEEF</p>
+    </span>
+</div>
 
-```bash
-$ nano ~/.rpmmacros
-```
-
-И добавь в него следующие строчки:
-```bash
-%packager Alexander Pushkin <pushkeen@altlinux.org>
-%_gpg_name BFFDEB200AAC53999992BA3D10EEDE37DEADBEEF
-```
-
-После чего нажимай комбинацию клавиш `Ctrl+O` (да, это английская О, не ноль) для сохранения файла.
+После чего нажимай комбинацию клавиш <kbd>Ctrl</kbd>+<kbd>O</kbd> (да, это английская О, не ноль) для сохранения файла.

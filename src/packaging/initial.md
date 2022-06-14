@@ -3,19 +3,20 @@
 Каждый пакет начинается с инициализации в нём пустого git репозитория. Или "реинициализации" существующего.
 
 Реинициализация, если можно так выразиться, представляет собой удаление старого репозитория и создание нового.
-```bash
-$ rm -r .git/  # Если нам требуется "реинициализировать" существующий git-репозиторий
-$ git init  # Инициализируем новый git-репозиторий
-```
+<div id="termynal" data-termynal data-ty-title="bash" data-ty-typeDelay="40" data-ty-lineDelay="700">
+    <span data-ty="input" data-ty-prompt="[~] $">rm -r .git/</span>
+    <span data-ty="input" data-ty-prompt="[~] $">git init</span>
+    <span class="no-select" data-ty>Initialized empty repository @ ./mitmproxy</span>
+</div>
 
 После чего создаём два файла, которые собственно и отличают наш пакет от простых исходников.
 - `.gear/rules` - файл с правилами для сборки этого пакета Hasher'ом.
-- `<package_name>.spec` - описание пакета.
+- `{PACKAGE_NAME}.spec` - описание пакета.
 
-```bash
-$ mkdir -p .gear/ && touch .gear/rules
-$ touch <package_name>.spec
-```
+<div id="termynal" data-termynal data-ty-title="bash" data-ty-typeDelay="40" data-ty-lineDelay="700">
+    <span data-ty="input" data-ty-prompt="[~] $">mkdir -p .gear/ && touch .gear/rules</span>
+    <span data-ty="input" data-ty-prompt="[~] $">touch {PACKAGE_NAME}.spec</span>
+</div>
 
 О них дальше и пойдёт речь.
 
@@ -34,6 +35,10 @@ $ touch <package_name>.spec
 [pushkeen@localhost mitmproxy-package]$ cat .gear/rules
 tar.gz: targetTag:mitmproxy-src
 ```
+<div id="termynal" data-termynal data-ty-title="bash" data-ty-typeDelay="40" data-ty-lineDelay="700">
+    <span data-ty="input" data-ty-prompt="[~] $">cat .gear/rules</span>
+    <span class="no-select" data-ty>tar.gz: targetTag:mitmproxy-src</span>
+</div>
 
 В этой единственной строчке мы указываем:
 - что для конкретной версии приложения (targetTag) в пакете (пусть она будет 8.0.0)
