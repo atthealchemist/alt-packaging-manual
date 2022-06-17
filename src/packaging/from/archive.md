@@ -7,6 +7,6 @@
 После чего имя папки с исходниками ({SOURCES_DIR}) устанавливаем в `.gear/rules`
 <div id="termynal" data-termynal data-ty-title="nano .gear/rules" data-ty-typeDelay="40" data-ty-lineDelay="700">
     <span data-ty>
-        <p>tar.gz: targetTag:{SOURCES_DIR}</p>
+        <p>tar: {SOURCES_DIR}</p>
     </span>
 </div>

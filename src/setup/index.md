@@ -25,5 +25,8 @@
 <!-- Конфигурация `.rpmmacros` -->
 {{#include rpmmacros.md}}
 
+<!-- Конфигурация APT -->
+{{#include apt.md}}
+
 <!-- Конфигурация Hasher -->
 {{#include hasher.md}}
